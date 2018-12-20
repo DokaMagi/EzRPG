@@ -1,0 +1,55 @@
+body {
+    -webkit-app-region: no-drag;
+    margin:0;
+}
+
+#title-bar {
+    -webkit-app-region: no-drag;
+    display:flex;
+    margin: auto;
+    width: 100%;
+    position:static;
+    height: 40px;
+    background-color:#333;
+    color:white;
+    align-items:flex-end;
+}
+
+
+#title-bar-open {
+    -webkit-app-region: drag;
+    height: 95%;
+    width: 95%;
+}
+
+#title-bar-options {
+    right: 0;
+    display:flex;
+}
+
+.title-box {
+    -webkit-app-region: no-drag;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    position:relative;
+    display: inline-block;
+}
+
+.title-icon {
+    overflow: auto;
+    margin: auto;
+    position: relative;
+    top: 10px; left: 0; bottom: 0; right: 0;
+    background-size:15px;
+    width: 15px;
+    height: 15px;
+}
+
+#btnClose:hover {
+    background-color: #AF4667;
+}
+
+#btnMin:hover, #btnMax:hover {
+    background-color: #4A4A4A;
+}

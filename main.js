@@ -1,12 +1,22 @@
-const { app, BrowserWindow } = require('electron')
+'use strict';
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
+const url = require('url')
+
+
+require('electron-reload')(__dirname);
+
+
 let win
 
 function createWindow () {
-  // Criar uma janela de navegação.
-  win = new BrowserWindow({ width: 800, height: 600, frame: false })
+  win = new BrowserWindow(
+    { 
+      width: 800, 
+      height: 500, 
+      frame: false 
+    })
 
   win.loadFile('index.html')
 
@@ -18,3 +28,7 @@ function createWindow () {
 }
 
 app.on('ready', createWindow)
+
+app.on('window-all-closed', function() {
+  app.quit()
+})
