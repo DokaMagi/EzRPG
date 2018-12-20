@@ -1,0 +1,22 @@
+{
+  "name": "ezrpg",
+  "version": "1.0.0",
+  "description": "Utility RPG players",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DokaMagi/EzRPG.git"
+  },
+  "author": "DokaMagi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DokaMagi/EzRPG/issues"
+  },
+  "homepage": "https://github.com/DokaMagi/EzRPG#readme"
+}
