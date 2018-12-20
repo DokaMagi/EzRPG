@@ -18,7 +18,7 @@ function createWindow () {
       frame: false 
     })
 
-  win.loadFile('index.html')
+  win.loadFile('main.html')
 
   win.webContents.openDevTools()
   win.setMenu(null)
