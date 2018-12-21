@@ -1,28 +1,27 @@
-html,
-body {
-    height: 100%;
-    -webkit-app-region: no-drag;
-    margin:0;
-    color:white;
-}
-
 #title-bar {
     -webkit-app-region: no-drag;
     display:flex;
     margin: auto;
     width: 100%;
-    position:fixed;
+    position:static;
     height: 40px;
-    background-color:#333;
+    background-color:rgb(66, 66, 66);
     color:white;
     align-items:flex-end;
 }
 
+#logo-text {
+    margin-left: 10px;
+    margin-top:-7px; 
+    font-size:30px; 
+    font-family:titleFont;
+}
 
 #title-bar-open {
     -webkit-app-region: drag;
-    height: 95%;
-    width: 95%;
+    height: calc(100% - 5px);
+    width: calc(100% - 5px);
+    margin-left:5px;
 }
 
 #title-bar-options {
@@ -49,10 +48,23 @@ body {
     height: 15px;
 }
 
+.main-icon {
+    background-image:url(../imgs/dragon-orb.svg);
+    overflow: auto;
+    margin: auto;
+    margin-left:20px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    background-size:30px;
+    width: 30px;
+    height: 30px;
+}
+
 #btnClose:hover {
-    background-color: #AF4667;
+    background-color: rgb(192, 78, 78);
 }
 
 #btnMin:hover, #btnMax:hover {
-    background-color: #4A4A4A;
+    background-color: rgb(97, 97, 97);
 }

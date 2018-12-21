@@ -1,0 +1,46 @@
+#workspace {
+    display:flex;
+    height: calc(100% - 40px); ;
+}
+
+.line {
+    height: 2px;
+    width:100%;
+    background-color:#444;
+}
+
+/*Menu Stuff*/
+
+#menu {
+
+    background-color:#222;
+    display: flex;
+    display: inline-block;
+    
+    min-height: 100%;
+    min-width: 200px;
+}
+
+#desktop {
+    width: 100%;
+    background-color:#aaa
+}
+
+ul {
+    text-align: right;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+li {
+    padding-right:40px;
+    padding-bottom:10px;
+    padding-top:10px;
+    list-style-position:inside;
+
+    cursor: pointer;
+}
+
+li:hover {
+    background-color:#555
+}

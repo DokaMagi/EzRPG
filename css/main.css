@@ -1,0 +1,18 @@
+@font-face {
+    font-family: titleFont;
+    src: url(../fonts/Kanit/Kanit-Bold.ttf);
+}
+
+@font-face {
+    font-family: regularFont;
+    src: url(../fonts/Kanit/Kanit-Regular.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    font-family: regularFont; 
+    -webkit-app-region: no-drag;
+    margin:0;
+    color:white;
+}
