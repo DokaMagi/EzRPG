@@ -18,13 +18,12 @@ function createWindow () {
       frame: false 
     })
 
-  win.loadFile('main.html')
-
-  win.webContents.openDevTools()
   win.setMenu(null)
   win.on('closed', () => {
     win = null
   })
+  win.loadFile('main.html')
+
 }
 
 app.on('ready', createWindow)

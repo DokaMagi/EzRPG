@@ -15,4 +15,27 @@ body {
     -webkit-app-region: no-drag;
     margin:0;
     color:white;
+    overflow-y: scroll;
+    position:relative;
+}
+
+.custom-scroll::-webkit-scrollbar-track
+{
+	background-color: #222;
+}
+
+.custom-scroll::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #222;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb
+{
+	background-color: #555;
+}
+
+.custom-scroll {
+    overflow-y: scroll;
+    height:100%;
 }
