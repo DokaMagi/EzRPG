@@ -14,11 +14,14 @@ function createWindow () {
   win = new BrowserWindow(
     { 
       width: 800, 
-      height: 500, 
+      height: 500,
+      minHeight: 400,
+      minWidth: 340,
       frame: false 
     })
 
   win.setMenu(null)
+  win.toggleDevTools()
   win.on('closed', () => {
     win = null
   })

@@ -23,17 +23,19 @@
     background-color: #eee;
 }
 
-/*Menu Stuff*/
 #workspace {
     display:flex;
     position:relative;
     height: calc(100% - 90px);
 }
+
+/*Menu Stuff*/
+
 #menu {
     position:static;
     background-color: #222;
-    height: 100%;
-    width: 200px;
+    min-height: 100%;
+    min-width: 200px;
 }
 .menu-title {
     margin-left:30px;
@@ -60,4 +62,35 @@ li {
     list-style-position:inside;
     
     cursor: pointer;
+}
+
+/*Desktop Stuff*/
+
+#desktop {
+    color:black;
+    height: 100%;
+    width: 100%;
+}
+
+.content-box {
+    margin-top:10px;
+}
+
+.container {
+    margin:30px;
+    text-align: center;
+    font-size: 20px;
+    position:inherit;
+}
+
+.thumb {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 200px;
+    width: 150px;
+    background-color: #aaa;
+}
+
+.block {
+    display:flex;
+    flex-wrap: wrap;
 }
