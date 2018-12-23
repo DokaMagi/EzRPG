@@ -18,8 +18,8 @@ $("li").click(function() {
 
 $("#playerCharacters").click(function() {
     clearDesktop()
-    createTitle("Seus Personagens")
-    createContainer('abc')
+    block = createContent("Seus Personagens")
+    createContainer("Criar Novo Personagem", block)
     var infos = getInformation("characters")
     if (infos == []) {
         createContainer()
@@ -51,18 +51,23 @@ function createContent(title_text) {
     box.setAttribute("class", "content-box")
     var title = document.createElement("h1")
     title.setAttribute("class", "menu-title")
-    title.innerHTML = title_text
-    $('#desktop').append(div)
+    title.innerText = title_text
+    var block = document.createElement("div")
+    block.setAttribute("class", "block")
+    box.append(title)
+    box.append(block)
+    $('#desktop').append(box)
+    return block
 }
 
-function createContainer(title) {
+function createContainer(title, content_box) {
     var container = document.createElement("div")
     container.setAttribute("class", "container")
     var thumb = document.createElement('div')
     thumb.setAttribute('class', 'thumb')
-    var span = document.createElement('dspaniv')
+    var span = document.createElement('span')
     span.innerText = title
     container.append(thumb)
     container.append(span)
-    $('#desktop').append(container)
+    content_box.append(container)
 }
