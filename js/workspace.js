@@ -18,12 +18,15 @@ $("li").click(function() {
 
 $("#playerCharacters").click(function() {
     clearDesktop()
-    block = createContent("Seus Personagens")
-    createContainer("Criar Novo Personagem", block)
+    
     var infos = getInformation("characters")
-    if (infos == []) {
-        createContainer()
-    }
+    block = createContent("Seus Personagens")
+    container = createContainer("Criar Novo Personagem", "./imgs/plus.svg")
+    container.firstChild.style.backgroundSize = "50px"
+    container.addEventListener('click', function() {
+        
+    })
+    block.append(container)
 
 })
 
@@ -31,7 +34,6 @@ function getInformation(path) {
     var path = "./data/user/" + path
     var files = fs.readdirSync(path)
     var res = []
-    console.log(files)
     files.forEach(function(file) {
         var obj = JSON.parse(fs.readFileSync(path + '\\' + file, 'utf8'));
         res.push(obj)
@@ -60,14 +62,15 @@ function createContent(title_text) {
     return block
 }
 
-function createContainer(title, content_box) {
+function createContainer(title, background) {
     var container = document.createElement("div")
     container.setAttribute("class", "container")
     var thumb = document.createElement('div')
     thumb.setAttribute('class', 'thumb')
+    thumb.style.backgroundImage = 'url(' + background + ')'
     var span = document.createElement('span')
     span.innerText = title
     container.append(thumb)
     container.append(span)
-    content_box.append(container)
+    return container
 }

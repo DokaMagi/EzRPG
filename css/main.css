@@ -50,8 +50,7 @@ body {
 
 .workspace-scroll::-webkit-scrollbar-thumb
 {
-    border-radius: 10px;
-	background-color: #222;
+	background-color: #555;
 }
 
 

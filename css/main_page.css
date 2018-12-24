@@ -26,7 +26,13 @@
 #workspace {
     display:flex;
     position:relative;
-    height: calc(100% - 90px);
+    height: 100%;
+}
+
+#main-area {
+    position:absolute;
+    height:  calc(100% - 90px);;
+    width: 100%;
 }
 
 /*Menu Stuff*/
@@ -85,14 +91,28 @@ li {
 }
 
 .thumb {
+    cursor: pointer;
     border-radius:5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 200px;
     width: 150px;
-    background-color: #aaa;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: #555;
 }
 
 .block {
     display:flex;
     flex-wrap: wrap;
+}
+
+/*Popup Stuff*/
+
+#big-popup {
+    position:absolute;
+    height:  calc(100% - 40px);
+    width: 100%;
+    background-color:#111;
+    opacity:0.5;
+    z-index: 1;
 }
