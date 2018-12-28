@@ -110,9 +110,19 @@ li {
 
 #big-popup {
     position:absolute;
-    height:  calc(100% - 40px);
+    height: calc(100% - 40px);
     width: 100%;
-    background-color:#111;
-    opacity:0.5;
+    background: rgba(51, 51, 51, 0.5);
     z-index: 1;
+}
+
+.custom-form {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    min-width:80%;
+    min-height:70%;
+    margin:auto;
+    background-color: #fff;
 }
